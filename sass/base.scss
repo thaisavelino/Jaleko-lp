@@ -1,3 +1,331 @@
+// cores
+$roxo: #7C56F6;
+$roxo-claro: #AD70F1;
+$azul: #3B94F1;
+$azul-claro: #47AFF4;
+$verde: #4DCDCC;
+$verde-claro: #67DDD1;
+$laranja: #F47D3A;
+$laranja-claro: #F7B329;
+$cinza-escuro: #363953;
+$cinza: #5E6B8C;
+$cinza-claro: #B6C7DE;
+$branco: #FFF;
+
+// bg
+$bg-cinza: #F5F6F8;
+$bg-laranja-claro: rgba(252,177,73,0.27);
+$bg-laranja: rgba(248,123,72,0.27);
+$bg-verde: rgba(60,205,204,0.27);
+$bg-azul: rgba(58,134,246,0.27);
+$bg-roxo-claro: rgba(177,115,232,0.27);
+$bg-roxo: rgba(140,104,230,0.27);
+$bg-escuro: #171732;
+
+// fontes
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+// imports
+@import 'reset';
+
+// geral
+body {
+  font-family: 'Nunito', sans-serif;
+  color: $cinza-escuro;
+  font-size: 21px;
+  line-height: normal;
+}
+a {
+  color: $azul;
+  cursor: pointer;
+}
+a:hover {
+  color: $azul-claro;
+  text-decoration: none !important;
+}
+h1 {
+  font-size: 53px;
+  color: $roxo;
+  font-weight: $bold;
+  margin-bottom: 21px;
+}
+h2 {
+  font-size: 33px;
+  color: $roxo;
+  font-weight: $bold;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  @media(max-width: 767px) {
+    font-size: 24px;
+  }
+}
+h3 {
+  font-size: 27px;
+  color: $roxo;
+  font-weight: $bold;
+  margin-bottom: 21px;
+  margin-top: 20px;
+}
+h4 {
+  font-size: 21px;
+  color: $roxo;
+  font-weight: $bold;
+  margin-bottom: 21px;
+  margin-top: 40px;
+}
+p {
+  margin-bottom: 21px;
+  line-height: 24px;
+}
+ul {
+  margin-bottom: 21px;
+}
+strong {
+  font-weight: $bold !important;
+}
+@mixin placeholder($color) {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color !important;
+    opacity: 1; /* Firefox */
+    font-weight: $light;
+    font-style: italic;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color !important;
+    font-weight: $light;
+    font-style: italic;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color !important;
+    font-weight: $light;
+    font-style: italic;
+  }
+}
+@include placeholder($cinza-claro);
+.btn-primary {
+  border-radius: 100px;
+  border:2px solid $laranja;
+  background-color: $laranja;
+  color:$branco;
+  transition: all 0.5s;
+  font-weight: $regular;
+  padding: 9px 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  &:hover {
+    background-color: $laranja-claro;
+    border:2px solid $laranja-claro;
+  }
+  @media(max-width:767px) {
+    font-size: 15px;
+  }
+}
+.btn-secondary {
+  border-radius: 100px;
+  border:2px solid $cinza-escuro;
+  background-color: $cinza-escuro;
+  color:$branco;
+  transition: all 0.5s;
+  font-weight: $regular;
+  padding: 9px 30px;
+  text-transform: uppercase;
+  font-size: 18px;
+  &:hover {
+    background-color: $cinza-claro;
+    border:2px solid $cinza-claro;
+  }
+  @media(max-width:767px) {
+    font-size: 15px;
+  }
+}
+strong {
+  font-weight: $bold !important;
+}
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media(max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+// landing volta as aulas
+section.topo {
+  background: url(../img/topo.png) no-repeat center right $roxo;
+  background-size: contain;
+  background-color: $roxo;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h1 {
+    color:$branco;
+  }
+  p:nth-child(3) {
+    font-size: 24px;
+    color:$branco;
+    line-height: 30px;
+  }
+  p:nth-child(4) {
+    font-size: 21px;
+    color:$branco;
+    line-height: 30px;
+  }
+  @media (max-width:767px) {
+    background-image: none;
+    background-color: $roxo;
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+    p:nth-child(2) {
+      font-size: 18px;
+      text-align: center;
+    }
+    p:nth-child(3) {
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+// section.estude {
+//   background-color: $verde;
+//   h2 {
+//     color:$branco;
+//   }
+//   h3 {
+//     color:$branco;
+//   }
+//   div.app {
+//     margin-bottom:-350px;
+//   }
+// }
+section.o-que {
+  h2 {
+    text-align: left;
+    @media(max-width:767px) {
+      text-align: center;
+    }
+  }
+}
+section.vantagens {
+  p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+section.perfil {
+  background-color: $roxo;
+  h2 {
+    color:$verde-claro;
+  }
+  .ou {
+    div {
+      height: 100%;
+    }
+    p {
+      font-size: 92px;
+      font-weight: $bold;
+      color:$verde-claro;
+      text-transform: uppercase;
+    }
+    @media(max-width:767px) {
+      margin-top:100px;
+    }
+  }
+  .box-perfil {
+    background-color: $branco;
+    border-radius: 12px;
+    padding: 21px 21px 60px 21px;
+    min-height:480px;
+    position: relative;
+    max-width: 270px;
+    &.calouro {
+      float:right;
+      @media(max-width:767px) {
+        float:none;
+        margin: 0 auto;
+      }
+    }
+    &.veterano {
+      float:left;
+      @media(max-width:767px) {
+        float:none;
+        margin: 140px auto 0;
+      }
+    }
+    img {
+      margin-top: -100px;
+    }
+    p {
+      font-size: 18px;
+    }
+    a {
+      position: absolute;
+      bottom:21px;
+      right:21px;left:21px;
+      margin:auto;
+      display: inline-block;
+      border-radius: 100px;
+      border:2px solid $laranja;
+      background-color: $laranja;
+      color:$branco;
+      transition: all 0.5s;
+      font-weight: $regular;
+      padding: 9px 30px;
+      text-transform: uppercase;
+      font-size: 18px;
+      &:hover {
+        background-color: $laranja-claro;
+        border:2px solid $laranja-claro;
+      }
+    }
+  }
+  .tipo-estudante {
+    text-align:center;
+    margin-bottom: 50px;
+    color:$branco;
+    font-size: 25px;
+    @media(max-width: 767px) {
+      margin-bottom: 120px;
+    }
+  }
+}
+footer {
+  background-color: $bg-escuro;
+  margin-top: 30px;
+  padding: 15px;
+  p {
+    margin:0;
+    padding:0;
+    font-size: 16px;
+    color:$branco;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // cores  #7C56F6
 $roxo: #7C56F6;
 $roxo-claro: #AD70F1;
@@ -143,6 +471,7 @@ strong {
 strong {
   font-weight: $bold !important;
 }
+
 section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -164,20 +493,26 @@ section {
 }
 
 // landing Embaixador
+
 section.topo {
   padding-bottom: 0;
   background: linear-gradient(90deg, rgba(124,86,246,1) 1%, rgba(77,205,204,1) 100%);
   h1 {
     color:$branco;
     padding: 50px 0 30px;
-    width: 70%;
-    font-size: 3.2em;
+    //width: 70%;
+    font-size: 3em;
     line-height: 1.2em;
   }
   p {
     font-size: 1.5em;
     color:$branco;
     line-height: 1.7em;
+  }
+  @media (max-width:767px) {
+    h1 {
+      font-size: 2.3em;
+    }
   }
 }
 .topo-left {

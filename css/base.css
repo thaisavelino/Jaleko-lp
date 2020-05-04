@@ -237,8 +237,6 @@ section.topo {
   padding-bottom: 0;
   background: -webkit-gradient(linear, left top, right top, color-stop(1%, #7c56f6), to(#4dcdcc));
   background: linear-gradient(90deg, #7c56f6 1%, #4dcdcc 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
 section.topo h1 {

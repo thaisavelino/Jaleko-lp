@@ -158,11 +158,18 @@ section {
 }
 .col-md-3 > .icons {
   max-width: 45%;
+  @media(max-width: 767px) {
+    max-width: 100%;
+  }
 }
 
 .col-md-2 > .icons {
   max-width: 65%;
+  @media(max-width: 767px) {
+    max-width: 100%;
+  }
 }
+
 
 // landing Embaixador
 
@@ -227,7 +234,13 @@ section#form-formulario-lp-embaixadores-e4a8110e450319aaadbb {
   max-width: 100%;
   position: relative;
 }
-
+@media(max-width:850px) {
+  .bricks-form__field {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+}
 // text color
 .text-blue {
   color: $azul!important;

@@ -212,11 +212,20 @@ footer {
   }
 }
 
-//form
-form {
-  label {
-    color: $branco;
-  }
+//Ajustes para formulário da RD Station
+section#form-formulario-lp-embaixadores-e4a8110e450319aaadbb {
+  padding-top: 0;
+}
+.rd-text > h2 {
+  text-transform: inherit;
+}
+.bricks-form__field > textarea  {
+  height: 200px;
+}
+.bricks-form__field:nth-last-child(-n+2) {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
 }
 
 // text color

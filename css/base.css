@@ -315,7 +315,7 @@ section#form-formulario-lp-embaixadores-e4a8110e450319aaadbb {
   position: relative;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   .bricks-form__field {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;

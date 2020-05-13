@@ -79,6 +79,21 @@ p {
   font-size: 1.23em;
   line-height: 1.6em;
 }
+@media (max-width:800px) {
+  h1 {
+    font-size: 2.3em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+
 ul {
   margin-bottom: 21px;
 }
@@ -159,15 +174,12 @@ section {
 .col-md-3 > .icons {
   max-width: 45%;
   @media(max-width: 767px) {
-    max-width: 100%;
+    max-width: 65%;
   }
 }
 
 .col-md-2 > .icons {
   max-width: 65%;
-  @media(max-width: 767px) {
-    max-width: 100%;
-  }
 }
 
 
@@ -188,7 +200,7 @@ section.topo {
     color:$branco;
     line-height: 1.7em;
   }
-  @media (max-width:767px) {
+  @media (max-width:800px) {
     h1 {
       font-size: 2.3em;
     }
@@ -235,10 +247,15 @@ section#form-formulario-lp-embaixadores-e4a8110e450319aaadbb {
   position: relative;
 }
 @media(max-width:800px) {
+  // transform form - 1 collumn
   .bricks-form__field {
     flex: 0 0 100%;
     max-width: 100%;
     position: relative;
+  }
+  //form padding
+  #rd-row-juvacwbo .bricks--column > div {
+    padding: 0; 
   }
 }
 // text color
